@@ -164,7 +164,7 @@ class custom_jvp(Generic[ReturnValue]):
 
   def __repr__(self) -> str:
     # Represent this object as a function, matching the user's mental model.
-    return f"<function {self.__module__}.{self.__name__}>"
+    return f"<function {self.__module__}.{self.__qualname__}>"
 
 
   def defjvp(self,
