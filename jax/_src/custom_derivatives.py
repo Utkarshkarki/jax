@@ -163,8 +163,9 @@ class custom_jvp(Generic[ReturnValue]):
   __getattr__ = custom_api_util.forward_attr
 
   def __repr__(self) -> str:
-    # Represent this object as a function, matching the user's mental model.
-    return f"<function {self.__module__}.{self.__qualname__}>"
+    return f"<CustomJVP of {self.fun!r}>"
+
+
 
 
   def defjvp(self,
